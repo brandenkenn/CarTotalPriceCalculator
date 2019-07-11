@@ -6,22 +6,55 @@
     <title>Total Price Calculator</title>
 </head>
 <body>
-    <form id="input" action="">
-        <label for="basePrice">Base Price:</label><br> 
-        <input value="0" type="number" id="basePrice"><br>
-        <label for="docFee">Documentation Fee:</label><br>
-        <input value="679" type="number" id="docFee"><br>
-        <label for="taxRate">Tax Rate (as a percent):</label><br>
-        <input value="3" type="number" id="taxRate"><br>
-        <label for="registration">Registration Fee:</label><br>
-        <input value="99.5" type="number" id="registration"><br>
-        <label for="rebates">Rebates and Discounts:</label><br> 
-        <input value="0" type="number" id="rebates"><br>
-        <label for="misc">Miscellaneous:</label><br> 
-        <input value="0" type="number" id="misc"><br>
-        <button class="button" id="myBtn" onclick="totalPrice()" type="button">Submit</button>
-    </form>
-    <p id="result"></p>
+    <div id="forms">
+        <form id="input" action="">
+            <label for="basePrice">Base Price:</label><br> 
+            <input value="0" type="number" id="basePrice"><br>
+            <label for="docFee">Documentation Fee:</label><br>
+            <input value="679" type="number" id="docFee"><br>
+            <label for="taxRate">Tax Rate (as a percent):</label><br>
+            <input value="3" type="number" id="taxRate"><br>
+            <label for="registration">Registration Fee:</label><br>
+            <input value="99.5" type="number" id="registration"><br>
+            <label for="rebates">Rebates & Discounts:</label><br> 
+            <input value="0" type="number" id="rebates"><br>
+            <label for="misc">Miscellaneous:</label><br> 
+            <input value="0" type="number" id="misc"><br>
+            <label for="payoff">Trade Payoff Amount:</label><br> 
+            <input value="0" type="number" id="payoff"><br>
+            <label for="tradeValue">Trade Value: </label><br> 
+            <input value="0" type="number" id="tradeValue"><br>
+            <label for="downPayment">Down Payment: </label><br> 
+            <input value="0" type="number" id="downPayment"><br>
+            <div>
+            <button class="button" id="myBtn" onclick="totalPrice()" type="button">Submit</button>
+            </div>
+        </form>
+        <p id="result"></p>
+
+        <form id="paymentCalc" action="">
+                <label for="principal">Amount Financed:</label><br> 
+                <input value="0" type="number" id="principal"><br>
+                <label for="interestRate">Interest Rate (as a percent):</label><br>
+                <input value="0" type="number" id="interestRate"><br>
+                <label for="taxRate">Tax Rate (as a percent):</label><br>
+                <select id="term">
+                    <option value="12">12 Months</option>
+                    <option value="24">24 Months</option>
+                    <option value="36">36 Months</option>
+                    <option value="48">48 Months</option>
+                    <option value="60">60 Months</option>
+                    <option value="66">66 Months</option>
+                    <option value="72">72 Months</option>
+                    <option value="75">75 Months</option>
+                    <option value="84">84 Months</option>
+                </select><br>
+                <div>
+                <button class="button" id="myBtn" onclick="monthlyPaymentCalc()" type="button">Submit</button>
+                </div>
+            </form>
+            <p id="monthlyPayment"></p>
+        </div>
 </body>
 <script src="TotalPriceCalculator.js"></script>
 </html>
