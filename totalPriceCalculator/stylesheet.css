@@ -37,9 +37,9 @@ button:hover {
 }
 
 input {
-    border-color: grey;
     border-width: 1px;
     border-radius: 5px;
     padding-left: 10px;
     margin-top: 4px;
+    border:1px solid #2976f2;
 }
